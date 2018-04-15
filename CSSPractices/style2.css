@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: stretch;
+    margin: 0px;
+    min-height: 100%;
+    flex-wrap: nowrap;
+
+}
+.div {
+    width: 25%;
+    background: gray;
+    padding: 5px;
+}
+html {
+    height: 100%;
+}

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 11.4px;  
+}
+
+.header {
+    background-color: #0000ff;
+}
+
+.nav {
+    background-color: #800080;
+}
+
+.main {
+    background-color: #ffd700;
+    float: left;
+    width: 75%;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+.aside {
+    background-color: #808080;
+    height: 188px;
+}
+
+
+.footer {
+    background-color: #00ffff;
+    display: inline-block;
+}

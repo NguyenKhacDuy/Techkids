@@ -1,0 +1,35 @@
+<h1 class="text-center" id="questionContent">Question: {{question.questionContent}}</h1>
+
+<form action="answer"{{question._id}} id="answer" method="POST">
+    <div class="col-md-6 text-center">
+    <a href="/answer/{{question._id}}/no" class="no btn btn-danger"><span class="glyphicon glyphicon-thumbs-up"></span>Đúng/Có/Phải</a>
+    </div>
+    <div class="col-md-6 text-center">
+    <a href="/answer/{{question._id}}/yes" class="yes btn btn-primary"><span class="glyphicon glyphicon-thumbs-down"></span>Sai/Không/Trái</a>
+    </div>
+
+    <div class="col-md-12 text-center">
+        <a href="" class="btn btn-default">Ket qua vote</a>
+        <a href="" id="anotherQues" class="btn btn-default">Cau hoi khac</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#anotherQues").click(function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: '/', //duong link nhan data de cho vao ajax
+                    method: 'POST',
+                    success: function(res) {
+                        console.log(res);
+                        $('#questionContent').html(''+res.questionContent);
+                        $('.yes').attr('href', '/answer/'+res._id+'/yes');
+                        $('.no').attr('href', '/answer/'+res._id+'/no');
+                    }
+                })
+            })
+        })
+    </script>
+    {{!-- <input type="submit" name="answer" class="btn btn-danger" value="yes">
+    <input type="submit" name="answer" class="btn btn-primary" value="no"> --}}
+</form>

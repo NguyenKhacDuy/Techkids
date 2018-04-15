@@ -1,0 +1,38 @@
+.container {
+    width: 1350px;
+    border: black 1px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.navbar-fixed-top {
+    height: 100px;
+    position: fixed;
+}
+
+.background {
+    background: #ffffff;
+}
+
+.container div {
+    position: relative;
+}
+
+.sidebar0 {
+    padding-top: 100px;
+    background: #969494;
+    border: black 1px;
+    float: left;
+}
+.sidebar1 {
+    padding-top: 100px;
+    background: #969494; 
+    float: left;
+}
+.sidebar2 {
+    padding-top: 100px;
+    background: #969494; 
+    float: left;
+}

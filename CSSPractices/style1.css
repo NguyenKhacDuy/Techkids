@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+.a {
+    padding: 10px;
+}
+body {
+    margin: 0px;
+}
+.ads {
+    width: 200px;
+    height: 700px;
+    /* background-position: left;
+    position: relative; */
+    float: left;
+    background-color: lightgray;
+}
+.main {
+    overflow: hidden;
+    /* padding: 10px; */
+}
+.mainup {
+    background-color: gray;
+    /* height: 700px; */
+    /* position: relative; */
+    /* background-position: center     */
+}
+.maindown {
+    background-color: aqua;
+    /* position: relative; */
+    /* background-position: center; */
+}
+.menu {
+    background-color: lightgray;
+    width: 200px;
+    height: 700px;
+    /* position: relative; */
+    background-position: 900px;
+    float: right;
+}

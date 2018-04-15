@@ -1,0 +1,22 @@
+.button {
+    background: #72A98F;
+    color: #fff;
+    border: 0 none;
+    outline: 0 none;
+    border-radius: 2px;
+    padding: 7px 10px;
+    transition: all 1,5s ease-in-out;
+}
+.button:hover {
+    background: #3C153B;
+    box-shadow: 0 0 5px #3C153B;
+}
+
+.button:active {
+    background: #3C153B;
+    box-shadow: 0 0 0 transparent;
+}
+
+.clickme:hover .overlay {
+    
+}
