@@ -13,7 +13,7 @@ const imageModel = new Schema({
     imageUrl: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, default: '' },
-    createdBy: { type: String, required: true }, //khi co user: type: Schema.types.ObjectId
+    createdBy: { type: Schema.Types.ObjectId, ref: "users", required: true }, //khi co user: type: Schema.types.ObjectId
     view: { type: Number, default: 0 },
     like: { type: Number, default: 0 },
     active: { type: Boolean, default: true },

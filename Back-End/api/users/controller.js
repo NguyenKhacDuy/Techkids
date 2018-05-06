@@ -46,12 +46,12 @@ const updateUserAvatar = (id, { avatarUrl }) =>
             .catch(err => reject(err))
     });
 
-    const updateUserName = (id, { username }) =>
+const updateUserName = (id, { username }) =>
     new Promise((resolve, reject) => {
         userModel.update({
             _id: id
         }, {
-            username
+                username
             })
             .then(data => resolve({ id: data._id }))
             .catch(err => reject(err))
@@ -89,6 +89,14 @@ const deleteUser = id => new Promise((resolve, reject) => {
         .catch(err => reject(err))
 });
 
+const getUserForAuth = username => new Promise((resolve, reject) => {
+    userModel
+        .findOne({ username })
+        .select("username password _id")
+        .then(user => resolve(user))
+        .catch(err => reject(err))
+});
+
 module.exports = {
     createUser,
     getAllUser,
@@ -97,5 +105,6 @@ module.exports = {
     updateUserEmail,
     updateUserPassword,
     deleteUser,
-    updateUserName
+    updateUserName,
+    getUserForAuth
 }

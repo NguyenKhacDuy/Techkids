@@ -2,8 +2,10 @@ const express = require("express");
 const router = express.Router();
 
 const imageController = require('./controller')
+const authMiddleware = require('../auth/auth');
 
-router.post('/', (req, res) => {
+router.post('/', authMiddleware.authorize, (req, res) => {
+    req.body.id = req.session.userInfo.id;
     imageController
         .createImage(req.body)
         .then(result => res.send(result))

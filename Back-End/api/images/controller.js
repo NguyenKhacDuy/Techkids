@@ -1,12 +1,12 @@
 const imageModel = require('./model');
 
-const createImage = ({ imageUrl, title, description, createdBy }) =>
+const createImage = ({ imageUrl, title, description, id }) =>
     new Promise((resolve, reject) => {
         imageModel.create({
             imageUrl,
             title,
             description,
-            createdBy
+            createdBy: id
         })
             .then(data => resolve({ id: data._id }))
             .catch(err => reject(err))
@@ -18,7 +18,8 @@ const getAllImages = page => new Promise((resolve, reject) => {
     })
         .sort({ createdAt: -1 })
         .skip((page - 1) * 20)
-        .select("_id imageUrl title description createdAt createdBy view like")
+        .select("_id imageUrl title description createdAt view like")
+        .populate("createdBy", "username")
         .exec()
         .then(data => resolve(data))
         .catch(err => reject(err))
@@ -29,7 +30,8 @@ const getImage = id => new Promise((resolve, reject) => {
         active: true,
         _id: id
     })
-        .select("_id imageUrl title description createdAt createdBy view like comment")
+        .select("_id imageUrl title description createdAt view like comment")
+        .populate("createdBy","username")
         .exec()
         .then(data => resolve(data))
         .catch(err => reject(err))
