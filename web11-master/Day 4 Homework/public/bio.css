@@ -1,0 +1,44 @@
+body {
+    background-image: url("background.png");
+    color: greenyellow
+}
+ h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-size: 45px;
+    color: greenyellow
+ }
+
+ h2, h3 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+     color: greenyellow;
+ }
+
+ li {
+    font-family: 'Source Code Pro', monospace;
+     color: yellow;
+     font-size: 17px;
+ }
+
+ p{
+    text-align: center;
+ }
+
+ span{
+     font-size: 15px;
+     font-family: 'Heebo', sans-serif;
+ }
+
+ img {
+     width: 300px;
+     opacity: 0.5;
+     transition: all 1s ease-in-out 0.3s;
+ }
+
+ img:hover{
+     opacity: 1;
+     width: 500px;
+ }
+
+

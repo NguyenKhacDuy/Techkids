@@ -1,0 +1,10 @@
+#navbar{
+    background: green;
+    display: inline;
+}
+#navbar a{
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    display: inline;
+}

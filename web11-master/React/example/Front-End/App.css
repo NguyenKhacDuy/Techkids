@@ -1,0 +1,23 @@
+.title {
+  border-bottom: 2px solid #ccc;
+}
+
+body {
+  background: #FBFEF9;
+}
+
+.container form input {
+  border: 1px solid #BF1363;
+}
+button{
+  background: #BF1363;
+  color: #FFFFFF;
+}
+table input {
+  width: 70px !important;
+
+}
+.head {
+  background-color: #BF1363;
+  color: #FFFFFF;
+}

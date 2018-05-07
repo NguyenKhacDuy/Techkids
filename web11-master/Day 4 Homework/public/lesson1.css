@@ -1,0 +1,21 @@
+.bold{
+    color: red;
+    font-weight: bold; 
+}
+
+p {
+    font-size: 25px;
+}
+
+#colorGray{
+    color: gray;
+}
+
+input[type = text]{
+    color: fuchsia;
+}
+
+h3, h6{
+    height: 1000px;
+}
+
